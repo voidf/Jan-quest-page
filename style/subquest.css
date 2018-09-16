@@ -10,8 +10,11 @@ body
 	background-image:url(../pic/23406063_p0——1055x750.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
-	background-size:/*1477px 1050px*/1055px 750px;
-	/* background-position:50% 0%; */
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	/*background-size:1477px 1050px*/
+	background-position:center 0;
 }
 
 div

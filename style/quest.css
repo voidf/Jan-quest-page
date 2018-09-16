@@ -10,8 +10,12 @@ body
 	background-image:url(../pic/17264379_p0_1440x823.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
-	background-size:/*1584px 905px*/2027px 1223px;
+	/* background-size:1584px 905px2027px 1223px; */
 	/* background-position:50% 0%; */
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-position:center 0;
 }
 a:link
 {
