@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="../../../../tx.ico">
+		<link rel="stylesheet" type="text/css" href="style/default.css">
+		<title>
+			这里是兴趣使然的D412班会！（好像有哪里不对）
+		</title>
+	</head>
+	<audio src="bgm/1.mp3" autoplay onended="fuc()" id="bgmc">
+		<p id="np">1</p>
+	</audio>
+	<script>
+	String.prototype.format = function()
+	{  
+		if (arguments.length == 0)  
+			return this;  
+		for (var s = this, i = 0; i < arguments.length; i++)  
+			s = s.replace(new RegExp("\\{" + i + "\\}", "g"), arguments[i]);  
+		return s;  
+    };  //这是网上嫖的占位符函数
+	//***********************************
+	function fuc()
+	{
+		var te=document.getElementById("np");
+		
+		var i=parseInt(te.innerText);
+		i++;
+		if(i>30)
+		{
+			i%=30;
+		}
+		te.innerText=i;
+		var au=document.getElementById("bgmc");
+		au.src="{0}{1}{2}".format("bgm/",i,".mp3");
+		au.play();
+	}//这是我自己写的播放器切歌函数
+	//document.getElementById("bt").addEventListener('click',function{returnnum()},false);
+	//***********************************
+	document.addEventListener("DOMContentLoaded",function ()
+	{
+        var body = document.body;
+        var html = document.documentElement;
+        var itv,height = document.body.offsetHeight;
+        var page = scrollTop() / height | 0;
+        addEventListener("resize",onresize,false);
+        onresize();
+
+        //鼠标滚轮事件
+        document.body.addEventListener("onwheel" in document ? "wheel" : "mousewheel",function (e)
+		{
+            clearTimeout(itv);
+            itv = setTimeout(function () {
+                //判断滚轮滚的方向
+                var delta = e.wheelDelta / 120 || -e.deltaY / 3;
+                page -= delta;
+                var max = (document.body.scrollHeight / height | 0) -1;
+                if (page < 0){
+                    return page = 0;
+                }
+                if (page > max){
+                    return page = max;
+                }
+                move();
+            },100);
+            e.preventDefault();
+        });
+        //当窗体发生变化时还是保证每次滚动滚一屏
+        function  onresize()
+		{
+            height = body.offsetHeight;
+            move();
+        };
+        
+        function  move()
+		{
+            var value = height * page;
+            var diff = scrollTop() - value;
+            (function callee() {
+                diff = diff / 1.2 | 0;
+                scrollTop(value + diff);
+                if (diff){
+                    itv = setTimeout(callee,16);
+                }
+            })();
+        };
+
+        function scrollTop(v)
+		{
+            if (v == null){
+                return Math.max(body.scrollTop,html.scrollTop);
+            }else{
+                body.scrollTop = html.scrollTop = v;
+            }
+        }
+    });
+	
+	</script>
+	
+	
+	
+	
+	<body>
+		<!-- <div id="mainframework"> -->
+			<div id="pg1">
+				<br />
+				<br />
+				现在是班会时间！
+			</div>
+		<!-- </div>
+		<div id="mainframework"> -->
+			<div id="pg2">
+				<br />
+				<br />
+				<br />
+				经过了一周的重重考验，我们终于又等到了周五这天……
+				<br />
+				于是，经常搞事的D412宿舍又来强行影响大家学习啦！！
+			</div>
+		<!-- </div> --><!-- 
+		<div id="mainframework"> -->
+			<div id="pg2">
+				<br />
+				<br />
+				不过虽然也可以搞休闲点……
+				<br />
+				<br />
+				但是精彩的活动的确离不开大家的<span style="color:red">参与</span>啊！
+			</div>
+		<!-- </div> -->
+			<div id="pg3">
+				<br />
+				<br />
+				那么今天给大家带来的是……
+				<br />
+			
+			</div>
+			<div id="pg4">
+				<br />
+				百题大过关！
+				
+			</div>
+			<div id="c">
+				<br />
+				废话不多说，下面开始简单（简陋）的规则介绍~
+			</div>
+			<div id="ru">
+				<ul>
+					<li>1.节目开始时我们会抽取第一位”挑战者”开始抽取试题答题。</li>
+					<br />
+					<li>2.已经选过的试题不能重复选答。</li>
+					<br />
+					<li>3.每个题目都标注有Easy，Normal，Hard，Lunatic四个难度，Normal难度可以申请提示，对于Hard难度以上的题目答题者可以求助。</li>
+					<br />
+					<li>4.求助有两种方式：点一个人帮助作答或者要求出题人排除一个选项（Lunatic难度可以求助两次）。</li>
+					<br />
+					<li>5.无论答题对错，答题人都有权利指定下一轮的答题人。但每连续五个男生，必须点一个女生。每连续4个女生，必须点一个男生。7个人内不得相互复仇。</li>
+				</ul>
+			</div>
+			<div id="ru">
+				<ul>
+					<li>6.答错者如无特殊情况须在节目末尾接受惩罚游戏。</li>
+					<br />
+					<li>7.惩罚游戏有两种进行方式：自由才艺展示或抽取库内事件进行。</li>
+					<br />
+					<li>8.出题人对题目拥有最终解释权，如有疑问可当面向出题人提出。</li>
+					<br />
+					<li>9.望各位遵守基本纪律，维护良好的游戏秩序并尊重游戏结果。</li>
+					<br />
+					<li>10.大家一起和平地玩吧！</li>
+				</ul>
+			</div>
+			<div id="c">
+				<br />
+				现在开始<button type="button" id="bt" onclick="returnnum()">抽取</button>第一位挑战者！
+				<script>
+					function returnnum()
+					{
+						var numnum=Math.random()*(52)+1;
+						numnum=parseInt(numnum);
+						var tmp=document.getElementById("bt");
+						tmp.innerText=numnum;
+					}
+				</script>
+			</div>
+			<div id="c">
+				<br />
+				<a href="答题系统.html" target="_blank">点我</a>进入答题系统
+			</div>
+	</body>
+</html>
