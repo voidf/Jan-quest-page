@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="../../../../tx.ico">
+		<link rel="stylesheet" type="text/css" href="style/quest.css">
+		<title>
+			这里是选题系统！（好像有哪里不对）
+		</title>
+	</head>
+	<script>
+	String.prototype.format = function()
+	{  
+		if (arguments.length == 0)  
+			return this;  
+		for (var s = this, i = 0; i < arguments.length; i++)  
+			s = s.replace(new RegExp("\\{" + i + "\\}", "g"), arguments[i]);  
+		return s;  
+    };  //这是网上嫖的占位符函数
+	//***********************************
+
+	}//这是我自己写的播放器切歌函数
+	document.getElementById("bt").addEventListener('click',function{returnnum()},false);
+	//***********************************
+	document.addEventListener("DOMContentLoaded",function ()
+	{
+        var body = document.body;
+        var html = document.documentElement;
+        var itv,height = document.body.offsetHeight;
+        var page = scrollTop() / height | 0;
+        addEventListener("resize",onresize,false);
+        onresize();
+
+        //鼠标滚轮事件
+        document.body.addEventListener("onwheel" in document ? "wheel" : "mousewheel",function (e)
+		{
+            clearTimeout(itv);
+            itv = setTimeout(function () {
+                //判断滚轮滚的方向
+                var delta = e.wheelDelta / 120 || -e.deltaY / 3;
+                page -= delta;
+                var max = (document.body.scrollHeight / height | 0) -1;
+                if (page < 0){
+                    return page = 0;
+                }
+                if (page > max){
+                    return page = max;
+                }
+                move();
+            },100);
+            e.preventDefault();
+        });
+        //当窗体发生变化时还是保证每次滚动滚一屏
+        function  onresize()
+		{
+            height = body.offsetHeight;
+            move();
+        };
+        
+        function  move()
+		{
+            var value = height * page;
+            var diff = scrollTop() - value;
+            (function callee() {
+                diff = diff / 1.2 | 0;
+                scrollTop(value + diff);
+                if (diff){
+                    itv = setTimeout(callee,16);
+                }
+            })();
+        };
+
+        function scrollTop(v)
+		{
+            if (v == null){
+                return Math.max(body.scrollTop,html.scrollTop);
+            }else{
+                body.scrollTop = html.scrollTop = v;
+            }
+        }
+    })
+	
+	</script>
+	
+	
+	
+	
+	<body>
+		<div id="c">
+			题目列表
+			<br />
+			<!-- <a href="problems/test.html" target="_blank">test</a> -->
+			<a href="problems/1.html" target="_blank">1</a>
+			<a href="problems/2.html" target="_blank">2</a>
+			<a href="problems/3.html" target="_blank">3</a>
+			<a href="problems/4.html" target="_blank">4</a>
+			<a href="problems/5.html" target="_blank">5</a>
+			<a href="problems/6.html" target="_blank">6</a>
+			<a href="problems/7.html" target="_blank">7</a>
+			<a href="problems/8.html" target="_blank">8</a>
+			<a href="problems/9.html" target="_blank">9</a>
+			<a href="problems/10.html" target="_blank">10</a>
+			<a href="problems/11.html" target="_blank">11</a>
+			<a href="problems/12.html" target="_blank">12</a>
+			<a href="problems/13.html" target="_blank">13</a>
+			<a href="problems/14.html" target="_blank">14</a>
+			<a href="problems/15.html" target="_blank">15</a>
+			<a href="problems/16.html" target="_blank">16</a>
+			<a href="problems/17.html" target="_blank">17</a>
+			<a href="problems/18.html" target="_blank">18</a>
+			<a href="problems/19.html" target="_blank">19</a>
+			<a href="problems/20.html" target="_blank">20</a>
+			<a href="problems/21.html" target="_blank">21</a>
+			<a href="problems/22.html" target="_blank">22</a>
+			<a href="problems/23.html" target="_blank">23</a>
+			<a href="problems/24.html" target="_blank">24</a>
+			<a href="problems/25.html" target="_blank">25</a>
+			<a href="problems/26.html" target="_blank">26</a>
+			<a href="problems/27.html" target="_blank">27</a>
+			<a href="problems/28.html" target="_blank">28</a>
+			<a href="problems/29.html" target="_blank">29</a>
+			<a href="problems/30.html" target="_blank">30</a>
+			<a href="problems/31.html" target="_blank">31</a>
+			<a href="problems/32.html" target="_blank">32</a>
+			<a href="problems/33.html" target="_blank">33</a>
+			<a href="problems/34.html" target="_blank">34</a>
+			<a href="problems/35.html" target="_blank">35</a>
+			<a href="problems/36.html" target="_blank">36</a>
+			<a href="problems/37.html" target="_blank">37</a>
+			<a href="problems/38.html" target="_blank">38</a>
+			<a href="problems/39.html" target="_blank">39</a>
+			<a href="problems/40.html" target="_blank">40</a>
+			<a href="problems/41.html" target="_blank">41</a>
+			<a href="problems/42.html" target="_blank">42</a>
+			<a href="problems/43.html" target="_blank">43</a>
+			<a href="problems/44.html" target="_blank">44</a>
+			<a href="problems/45.html" target="_blank">45</a>
+			<a href="problems/46.html" target="_blank">46</a>
+			<a href="problems/47.html" target="_blank">47</a>
+			<a href="problems/48.html" target="_blank">48</a>
+			<a href="problems/49.html" target="_blank">49</a>
+			<a href="problems/50.html" target="_blank">50</a>
+		
+			<a href="problems/51.html" target="_blank">51</a>
+			<a href="problems/52.html" target="_blank">52</a>
+			<a href="problems/53.html" target="_blank">53</a>
+			<a href="problems/54.html" target="_blank">54</a>
+			<a href="problems/55.html" target="_blank">55</a>
+			<a href="problems/56.html" target="_blank">56</a>
+			<a href="problems/57.html" target="_blank">57</a>
+			<a href="problems/58.html" target="_blank">58</a>
+			<a href="problems/59.html" target="_blank">59</a>
+			<a href="problems/60.html" target="_blank">60</a>
+			<a href="problems/61.html" target="_blank">61</a>
+			<a href="problems/62.html" target="_blank">62</a>
+			<a href="problems/63.html" target="_blank">63</a>
+			<a href="problems/64.html" target="_blank">64</a>
+			<a href="problems/65.html" target="_blank">65</a>
+			<a href="problems/66.html" target="_blank">66</a>
+			<a href="problems/67.html" target="_blank">67</a>
+			<a href="problems/68.html" target="_blank">68</a>
+			<a href="problems/69.html" target="_blank">69</a>
+			<a href="problems/70.html" target="_blank">70</a>
+			<a href="problems/71.html" target="_blank">71</a>
+			<a href="problems/72.html" target="_blank">72</a>
+			<a href="problems/73.html" target="_blank">73</a>
+			<a href="problems/74.html" target="_blank">74</a>
+			<a href="problems/75.html" target="_blank">75</a>
+			<a href="problems/76.html" target="_blank">76</a>
+			<a href="problems/77.html" target="_blank">77</a>
+			<a href="problems/78.html" target="_blank">78</a>
+			<a href="problems/79.html" target="_blank">79</a>
+			<a href="problems/80.html" target="_blank">80</a>
+			<a href="problems/81.html" target="_blank">81</a>
+			<a href="problems/82.html" target="_blank">82</a>
+			<a href="problems/83.html" target="_blank">83</a>
+			<a href="problems/84.html" target="_blank">84</a>
+			<a href="problems/85.html" target="_blank">85</a>
+			<a href="problems/86.html" target="_blank">86</a>
+			<a href="problems/87.html" target="_blank">87</a>
+			<a href="problems/88.html" target="_blank">88</a>
+			<a href="problems/89.html" target="_blank">89</a>
+			<a href="problems/90.html" target="_blank">90</a>
+			<a href="problems/91.html" target="_blank">91</a>
+			<a href="problems/92.html" target="_blank">92</a>
+			<a href="problems/93.html" target="_blank">93</a>
+			<a href="problems/94.html" target="_blank">94</a>
+			<a href="problems/95.html" target="_blank">95</a>
+			<a href="problems/96.html" target="_blank">96</a>
+			<a href="problems/97.html" target="_blank">97</a>
+			<a href="problems/98.html" target="_blank">98</a>
+			<a href="problems/99.html" target="_blank">99</a>
+			<a href="problems/100.html" target="_blank">100</a>
+			<a href="惩罚游戏.html" target="_blank">惩罚游戏</a>
+			
+		</div>
+		<div>
+			<a>
+		</div>
+	</body>
+</html>

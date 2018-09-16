@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="../../../../../tx.ico">
+		<link rel="stylesheet" type="text/css" href="../style/subquest.css">
+		<title>
+			这里是第四十七题！（好像没什么不对）
+		</title>
+	</head>
+	<script>
+	String.prototype.format = function()
+	{  
+		if (arguments.length == 0)  
+			return this;  
+		for (var s = this, i = 0; i < arguments.length; i++)  
+			s = s.replace(new RegExp("\\{" + i + "\\}", "g"), arguments[i]);  
+		return s;  
+    };  //这是网上嫖的占位符函数
+	//***********************************
+
+	//这是我自己写的播放器切歌函数
+	//***********************************
+	document.addEventListener("DOMContentLoaded",function ()
+	{
+        var body = document.body;
+        var html = document.documentElement;
+        var itv,height = document.body.offsetHeight;
+        var page = scrollTop() / height | 0;
+        addEventListener("resize",onresize,false);
+        onresize();
+
+        //鼠标滚轮事件
+        document.body.addEventListener("onwheel" in document ? "wheel" : "mousewheel",function (e)
+		{
+            clearTimeout(itv);
+            itv = setTimeout(function () {
+                //判断滚轮滚的方向
+                var delta = e.wheelDelta / 120 || -e.deltaY / 3;
+                page -= delta;
+                var max = (document.body.scrollHeight / height | 0) -1;
+                if (page < 0){
+                    return page = 0;
+                }
+                if (page > max){
+                    return page = max;
+                }
+                move();
+            },100);
+            e.preventDefault();
+        });
+        //当窗体发生变化时还是保证每次滚动滚一屏
+        function  onresize()
+		{
+            height = body.offsetHeight;
+            move();
+        };
+        
+        function  move()
+		{
+            var value = height * page;
+            var diff = scrollTop() - value;
+            (function callee() {
+                diff = diff / 1.2 | 0;
+                scrollTop(value + diff);
+                if (diff){
+                    itv = setTimeout(callee,16);
+                }
+            })();
+        };
+
+        function scrollTop(v)
+		{
+            if (v == null){
+                return Math.max(body.scrollTop,html.scrollTop);
+            }else{
+                body.scrollTop = html.scrollTop = v;
+            }
+        }
+    })
+	
+	</script>
+	
+	
+	
+	
+	<body>
+		<h1>
+			第四十七题
+			<br />
+			难度：<span style="color:#FF0000">【Hard】</span>
+			<br />
+			标签：【ACG文化】
+			<br />
+			作者：voidf
+		</h1>
+		<div style="font-size:36px">
+			以下哪些动漫作品是国漫？(4个正确答案，选对3个过关)
+			<br />
+			<button type="button" id="smallb" onclick="ac()">A</button>全职高手
+			<br />
+			<button type="button" id="smallb" onclick="wa()">B</button>刀剑神域
+			<br />
+			<button type="button" id="smallb" onclick="wa()">C</button>路人女主养成方法
+			<br />
+			<button type="button" id="smallb" onclick="wa()">D</button>游戏人生
+			<br />
+			<button type="button" id="smallb" onclick="ac()">E</button>狐妖小红娘
+			<br />
+			<button type="button" id="smallb" onclick="wa()">F</button>宝石之国
+			<br />
+			<button type="button" id="smallb" onclick="wa()">G</button>动漫同好会
+			<br />
+			<button type="button" id="smallb" onclick="wa()">H</button>明星学生妹
+			<br />
+			<button type="button" id="smallb" onclick="ac()">I</button>凹凸世界
+			<br />
+			<button type="button" id="smallb" onclick="wa()">J</button>紫罗兰永恒花园
+			<br />
+			<button type="button" id="smallb" onclick="ac()">K</button>那年那兔那些事
+			<br />
+			<button type="button" id="smallb" onclick="wa()">L</button>NEW GAME!
+			<br />
+			<button type="button" id="smallb" onclick="wa()">M</button>银魂
+			<br />
+			<button type="button" id="smallb" onclick="wa()">N</button>如果有妹妹就好了。
+			<p id="resu">结果...</p><p id="acctr">0</p>
+		</div>
+		<script>
+			function wa()
+			{
+				var o=document.getElementById("resu");
+				o.innerText="错误！"
+				o.style.color="#FF0000";
+			}
+			function ac()
+			{
+				var o=document.getElementById("resu");
+				var ct=document.getElementById("acctr");
+				o.innerText="正确！";
+				var tpp=parseInt(ct.innerText);
+				ct.innerText=++tpp;
+				o.style.color="#00AF00";
+			}
+		</script>
+		
+	</body>
+</html>

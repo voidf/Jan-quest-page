@@ -1,0 +1,88 @@
+html
+{
+	height:100%;
+}
+body
+{
+	height:100%;
+	margin:0px;
+	background-color:#FFFFFF;
+	background-image:url(../pic/33606534_p0_1689x1019.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:/*1689px 1019px*/2027px 1223px;
+	/* background-position:50% 0%; */
+}
+div
+{
+	height:100%;
+	margin:0px;
+	/*width: 80%;
+	min-width: 960px;*/
+	background-color:rgba(255,250,250,0.75);
+	/*padding:100px;*/
+	margin-top:0px;
+	margin-bottom:0px;
+	/*box-shadow:0 2px 6px rgba(145,0,255,0.6);*/
+	font-family:"ShaoNv for motoe2";
+	font-size:70px;
+	
+}
+#mainframework
+{
+	/*height:1000%;*/
+	margin:0;
+	width: 80%;
+	min-width: 960px;
+	background-color:rgba(255,250,250,0.75);
+	padding:100px;
+	margin-top:0px;
+	margin-bottom:0px;
+	box-shadow:0 2px 6px rgba(145,0,255,0.6);
+	font-family:"ShaoNv for motoe2";
+	font-size:70px;
+}
+#c
+{
+	text-align:center;
+	font-size:140px;
+}
+
+#pg1
+{
+	height:100%;
+	color:#100000;
+	text-align:center;
+	font-size:110px;
+}
+#pg2
+{
+	
+	height:100%;
+	/*font-family:"ShaoNv for motoe2";
+	font-size:40px;*/
+}
+#pg3
+{
+	font-size:140px;
+	text-align:center;
+	
+}
+#pg4
+{
+	font-size:200px;
+	text-align:center;
+	color:#FF0000;
+}
+#ru
+{
+	font-size:50px;
+	/*text-align:center;*/
+	
+}
+#bt
+{
+	width:280px;
+	height:150px;
+	font-size:100px;
+}
