@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- <link rel="icon" href="../../../../tx.ico"> -->
+		<link rel="stylesheet" type="text/css" href="style/default.css">
+		<link rel="stylesheet" type="text/css" href="style/embedFont.css">
+		<link rel="stylesheet" type="text/css" href="style/video-js.css">
+		
+		<title>
+			平面设计
+		</title>
+		<audio src="bgm/1.mp3" autoplay onended="fuc()" id="bgmc">
+			<p id="np">1</p>
+		</audio>
+	</head>
+	<script type="text/javascript" src="js/pptTypes.js"></script>
+	<script type="text/javascript" src="js/switchSongs.js"></script>
+	<script type="text/javascript" src="js/replaceTag.js"></script>
+	<script type="text/javascript" src="js/buttonClick.js"></script>
+	<script type="text/javascript" src="js/video.js"></script>
+	<body background="resources/page-light.png">
+		<div class="titlePage">
+			<br />
+			
+			<br />
+			平面设计
+			<br /><button type="button" onclick="clicktest()">bgm</button>
+		</div>
+		<div class="whitePage">
+			为什么要学习平面设计？
+			<p class="opa" id="op1">课件制作</p>
+			<p class="opa" id="op2">班服设计</p>
+			<p class="opa" id="op3">板报绘制</p>
+			<del class="opa" id="op4" style="opacity:0;font-size:50px;">摸鱼画画</del>
+
+		</div>
+		<div class="blackPage">
+			认识字重
+			<br />
+			<span class="opa" id="op1" style="font-size:80px;font-family:APF H;">
+			Heavy
+			</span><br />
+			<span class="opa" id="op2" style="font-size:80px;font-family:APF B;">
+			Bold
+			</span><br />
+			<span class="opa" id="op3" style="font-size:80px;font-family:APF R;">
+			Regular
+			</span><br />
+			<span class="opa" id="op4" style="font-size:80px;font-family:APF L;">
+			Light
+			</span><br />
+			<span class="opa" id="op5" style="font-size:80px;font-family:APF EXL;">
+			ExtraLight
+			</span>
+		</div>
+		<div class="whitePage" style="text-align: center;">
+			<span style="font-family: APF H;font-size: 100px;">标题</span>
+			<br /><br />
+			<span style="font-family: APF L;font-size: 100px;">正文</span>
+		</div>
+		<div class="titlePage">
+			<br /><br />
+			善用对齐，注意留白
+		</div>
+		<div class="whitePage" style="padding:0px;line-height: 40px;">
+			<span style="font-size:40px;">
+				已知数列{a[n]}满足a[1]=2，a[n+1]=2( a[n]^2 )，请回答下列问题：
+				（1）设b[n]=log[2]( a[n] )，求b[n+1]关于b[n]的关系式（即求解b[n]的递推公式）；
+				（2）求数列a[n]的通项公式。
+				解：
+				(1) 显然对于任意正整数n均有a[n]＞0（严格论证可用数学归纳法证明）。
+				则 b[n] = log[2](a[n])，b[n+1] = log[2]( 2*a[n]^2 ) = 2*log[2](a[n]*√2) = 2*( 1/2 + log[2](a[n]) ) = 2(b[n] + 1/2)
+				即b[n+1] = 2b[n] + 1
+				(2) （思路：构造等比数列以求解b[n]的通项公式，进而求解a[n]的通项公式）
+				由（1）中结论，等式两边加一常数k得 b[n+1] + k = 2b[n] + 1 +k = 2(b[n] + 1/2 + k/2)
+				即 k = k/2 + 1/2 ，解得k=1.
+				从而( b[n+1] + 1)/( b[n] + 1) = 2，又因为b[1] + 1 = log[2]( a[1] ) + 1 =2
+				因此数列{b[n] + 1}是首项为2，公比为2的等比数列。
+				则b[n] + 1 = log[2]( a[n] ) + 1 = 2*2^(n-1) = 2^n，移项后等式两边取2的指数得通项公式
+				a[n]=2^(2^n-1)
+			</span>
+			<img src="resources/section-fail.png" class="absopa" id="op1"></img>
+		</div>
+		<div class="whitePage" style="font-family: APF B;padding:40px;float:left;width:50%;font-size: 25px;line-height: 55px;">
+				已知数列{a[n]}满足a[1]=2，a[n+1]=2( a[n]^2 )，请回答下列问题：
+				<br />
+				（1）设b[n]=log[2]( a[n] )，求b[n+1]关于b[n]的关系式（即求解b[n]的递推公式）；
+				<br />
+				（2）求数列a[n]的通项公式。
+				<br />
+				<br />
+				解：
+				<br />
+				(1) 显然对于任意正整数n均有a[n]＞0（严格论证可用数学归纳法证明）。
+				<br />
+				则 b[n] = log[2](a[n])，
+				<br />
+				b[n+1] = log[2]( 2*a[n]^2 )
+				<br />
+				= 2*log[2](a[n]*√2) 
+				<br />
+				= 2*( 1/2 + log[2](a[n]) ) 
+				<br />= 2(b[n] + 1/2)
+				<br />
+				即b[n+1] = 2b[n] + 1
+				
+		</div>
+		<div class="whitePage" style="font-family: APF B;padding:40px;font-size: 25px;line-height: 55px;">
+				(2) （思路：构造等比数列以求解b[n]的通项公式，进而求解a[n]的通项公式）
+				<br />
+				由（1）中结论，等式两边加一常数k得 
+				<br />
+				b[n+1] + k = 2b[n] + 1 +k 
+				<br />
+				= 2(b[n] + 1/2 + k/2)
+				<br />
+				即 k = k/2 + 1/2 ，解得k=1.
+				<br />
+				从而( b[n+1] + 1)/( b[n] + 1) = 2，
+				<br />又因为b[1] + 1 = log[2]( a[1] ) + 1 =2
+				<br />
+				因此数列{b[n] + 1}是首项为2，公比为2的等比数列。
+				<br />
+				则b[n] + 1 = log[2]( a[n] ) + 1 
+				<br />
+				= 2*2^(n-1) = 2^n，
+				<br />
+				移项后等式两边取2的指数得通项公式
+				<br />
+				a[n]=2^(2^n-1)
+				<img src="resources/section-pass.png" class="absopa" id="op1"></img>
+		</div>
+		<div class="titlePage">
+			 
+			<br />
+			为什么物测要画格子,
+			<br />
+			<br />
+			英语答卡背面竖着写?
+		</div>
+		<div class="titlePageB">
+			<br />
+			<br />
+			调整行距
+			<br />
+			别 调 字 距
+		</div>
+		<div class="blackPage" style="font-family: APF M;font-size: 32px;line-height: 32px;">
+			そうだよ（便乗）<br />
+			就是啊（便乘）<br />
+			表示附和。“便乘”是乘机、跟风的意思。<br />
+			在大陆淫梦中被用于同音词，如“便乘光”、“不成功，便乘人”、“救世啊”、“942”、“旧事啊”等等。<br />
+			《下北泽：便乘人》野兽先辈仿生人说确信<br />
+			ん？<br />
+			嗯？<br />
+			用于烘托令人感到不安的气氛。通常出现于音MAD中的一转攻势前夕。<br />
+			おまたせ<br />
+			久等了<br />
+			当淫梦厨期待已久的情节，或淫梦要素出现时。<br />
+			は？（威圧）<br />
+			哈？（胁迫）<br />
+			表示不解或疑惑。<br />
+			あのさぁ・・・<br />
+			那个啊…<br />
+			表示对目前事态发展的不解或不满。<br />
+			ありがとナス<br />
+			谢谢<br />
+			闷绝5中KBTIT和虐待叔叔的发言。<br />
+			「ありがとうございます」中，「ございます」由于说得太快变成了「ナス」。<br />
+			<img src="resources/section-fail.png" class="absopa" id="op1"></img>
+		</div>
+		<div class="blackPage" style="font-family: APF M;font-size: 32px;line-height: 50px;">
+			そうだよ（便乗）<br />
+			就是啊（便乘）<br />
+			表示附和。“便乘”是乘机、跟风的意思。<br />
+			在大陆淫梦中被用于同音词，如“便乘光”、“不成功，便乘人”、“救世啊”、“942”、“旧事啊”等等。<br />
+			《下北泽：便乘人》野兽先辈仿生人说确信<br />
+			ん？<br />
+			嗯？<br />
+			用于烘托令人感到不安的气氛。通常出现于音MAD中的一转攻势前夕。<br />
+			おまたせ<br />
+			久等了<br />
+			当淫梦厨期待已久的情节，或淫梦要素出现时。<br />
+			は？（威圧）<br />
+			哈？（胁迫）<br />
+			表示不解或疑惑。<br />
+			<img src="resources/section-pass.png" class="absopa" id="op1"></img>
+		</div>
+		<div class="titlePage">
+			<br />
+			<br />
+			不正式的技巧
+		</div>
+		<div class="whitePage">
+			颜文字：让版面更生动
+			<p class="opa" id="op1">(￣▽￣)&nbsp;&nbsp;( ´_ゝ｀)&nbsp;&nbsp;(￣ε(#￣) Σ&nbsp;&nbsp;(●￣(ｴ)￣●)</p>
+			<p class="opa" id="op2">XD&nbsp;&nbsp;:P&nbsp;&nbsp;:D&nbsp;&nbsp;:X</p>
+			<p class="opa" id="op3">QAQ&nbsp;&nbsp;TwT&nbsp;&nbsp;OwO&nbsp;&nbsp;TAT</p>
+			<del class="opa" id="op4">（绝望）&nbsp;&nbsp;（确信）&nbsp;&nbsp;（暴论）&nbsp;&nbsp;（大嘘）</del>
+
+		</div>
+		<div class="whitePage">
+			表情（包）和动图：强化展示笑果	<br />
+			<img src="resources/AC.png" id="op1" class="opa"></img>
+			<img src="resources/HJ.png" id="op2" class="opa"></img><br />
+			<img src="resources/SH.jpg" id="op3" class="opa" height="300" width="400"></img><br />
+			<img src="resources/yrmsn.jpg" id="op4" class="opa"></img>
+		</div>
+		<div class="titlePageB">
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(白嫖)
+			<br />
+			学会欣赏
+		</div>
+		<div class="blackPage">
+			<a href="https://www.apple.com/cn/mac-pro/" target="_blank">MAC PRO</a><br />
+			<a href="https://ai.baidu.com/" target="_blank">百度AI</a><br />
+			<a href="https://www.aliyun.com/" target="_blank">阿里云</a><br />
+			<a href="https://osu.ppy.sh/home" target="_blank">OSU!</a><br />
+			<a href="https://live.bilibili.com/hd/aki2016" target="_blank">哔哩哔哩红叶祭2016</a><br />
+			<a href="https://live.bilibili.com/hd/carnival2nd" target="_blank">哔哩哔哩春节2017</a><br />
+			<a href="https://voidf.github.io" target="_blank"><del>百题大过关</del></a>
+
+
+		</div>
+		<div class="blackPage">
+			套用模板<br />
+			参考佳作<br />
+			善用百度<br />
+			耐心琢磨
+		</div>
+		<div class="titlePage">
+			<br /><br />特色设计
+		</div>
+		<div class="whitePage">
+			背景添加
+			<p class="opa" id="op1">尽量高清</p>
+			<p class="opa" id="op2">不要拉伸</p>
+			<p class="opa" id="op3">不要影响文字阅读</p>
+		</div>
+		
+		<div class="whitePage" style="background-image:url(resources/反例.png);background-attachment: fixed;background-position:center 0;">
+			
+		</div>
+		<div class="whitePage">
+			<!--<img id="op1" class="floatBG" src="resources/平海，壁纸.jpg" style="position: absolute;left:-2000px;top:-2000px;opacity: 0;"></img>
+			--><p>调整透明度</p>
+		</div>
+		<!--<div class="whitePage" id="BGOpaChange" style="width:50%;background-color: rgba(255,255,255,0.1);background-size: cover;-webkit-background-size: cover;-o-background-size: cover;background-image:url(resources/平海，壁纸.jpg);background-attachment: fixed;background-position:center 0;">
+
+		</div>-->
+		<div>
+		</div>
+		<div>
+		</div>
+		<div class="whitePage">
+			动画和艺术字
+			<p class="opa" id="op1">有必要才加</p>
+			<p class="opa" id="op2">适可而止</p>
+			<p class="opa" id="op3">不要喧宾夺主</p>
+		</div>
+		<div class="titlePageB">
+			<br />
+			<br />
+			配色（重要）
+			<br />
+			<button type="button" onclick="stopbgm()">停止</button>
+		</div>
+		<div style="padding: 0px">
+			<video
+				id="my-player"
+				class="video-js vjs-big-play-button vjs-fluid"
+				controls
+				preload="auto"
+				data-setup='{}'>
+				<source src="resources/2.mp4" type="video/mp4"></source>
+				<p class="vjs-no-js">
+					To view this video please enable JavaScript, and consider upgrading to a web browser that
+					<a href="http://videojs.com/html5-video-support/" target="_blank">
+					supports HTML5 video
+					</a>
+				</p>
+			</video>
+		</div>
+		<div class="titlePage">
+			<br />
+			<br />
+			THX
+		</div>
+	</body>
+</html>
+			<!-- <button type="button" id="bt" onclick="clicktest()">测试</button> -->
+		<!-- <input type="file" id="file_input" webkitdirectory directory />
+		<p>Files:</p>
+		<pre id="files">
+
+		</pre> -->
