@@ -8,11 +8,26 @@
         <script type="text/javascript" src="js/switchSongs.js"></script>
         <script type="text/javascript" src="js/replaceTag.js"></script>
         <style type="text/css">
+        .adds{
+            text-align:center;
+            font-size: 350%;
+            font-weight: bold;
+        }
         a:visited{
             color:rgb(229, 231, 69);
+            text-decoration: none;
         }
         a:link{
             color: #6ddfff;
+        }
+        .def{
+            color:#0cff00;
+            font-weight:bold;
+        }
+        #declare{
+            color:rgb(211, 211, 211);
+            font-size: 80%;
+            text-decoration: none;
         }
         /* .title:before{
             content:'';
@@ -23,7 +38,7 @@
             background-size: 100%;
         } */
         .title{
-            text-align: center;
+            text-align: center;font-size: 300%;font-weight:bold;
         }
         /* img{
             margin-left: center;
@@ -33,7 +48,7 @@
 			<p id="np">1</p>
 		</audio>
     </head>
-    <body style="color:#ffffff;background-image:url(res/bg.png);background-repeat:repeat;background-attachment:fixed;background-position:center 0;">
+    <body style="margin:15%;color:#ffffff;background-image:url(res/bg.png);background-repeat:repeat;background-attachment:fixed;background-position:center 0;">
         <div class="title">
         <a href="mindex.htm" style="font-size:400%;text-align: center"><br/><br/>手机排版</a><br/><br/><br/><br/><br/><br/>
         </div>
@@ -48,7 +63,7 @@
         <br/><br/>
         好的我们开始入门：<br/><br/><br/><br/>
         <div class="title">
-            <span style="font-size: 300%;font-weight:bold;">第一部分：能级和排布<br/><br/></span>
+            第一部分：能级和排布<br/><br/>
         </div>
         
 
@@ -58,14 +73,31 @@
         能层：国王（King）开始，王后（Queen）结束：KLMNOPQ。<br/><br/>
 
         能级图表：电子大致会按照这个顺序填充，前四周期中只有Cu（先填满了3d）例外。<br/><br/>
-        <a href="res/nj.jpg"><img src="res/nj.jpg"></a><a href="res/nj2.jpg"><img src="res/nj2.jpg"></a>
+        
+        <center>
+            <a href="res/nj.jpg">
+                <img src="res/nj.jpg"><br/>
+                <p id="declare">排布顺序图</p>
+            </a>
+        </center>
+            <br/>
+        <center>
+            <a href="res/nj2.jpg">
+                <img src="res/nj2.jpg">
+            </a>
+        </center>
         <br/><br/>
         第四周期（元素符号也要过一遍）：<br/><br/>
-        <a href="res/4zq.png"><img src="res/4zq.png"></a><br/><br/>
+        <center>
+            <a href="res/4zq.png"><img src="res/4zq.png"></a><br/>
+            <p id="declare">第四周期沙雕口诀</p>
+        </center>
+        <br/><br/>
 
 
         背好后我们来看看题目：<br/><br/>
         第一道题拿到手往往是叫你写：<br/><br/>
+        <center>
         <table border="1" style="text-align:center">
             <tr>
                 <td>
@@ -174,13 +206,18 @@
                 </td>
             </tr>
         </table>
+    </center>
         <br/><br/>
         まで，【价电子】是什么？<br/><br/>
         顾名思义，价电子就是影响元素化合价的电子。<br/><br/>
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>价电子指原子核外电子中能与其他原子相互作用形成化学键的电子，为原子核外跟元素化合价有关的电子。过渡元素的价电子不仅是最外层电子，次外层电子及某些元素的倒数第三层电子也可成为价电子。价电子指原子核外电子中能与其他原子相互作用形成化学键的电子，为原子核外跟元素化合价有关的电子。过渡元素的价电子不仅是最外层电子，次外层电子及某些元素的倒数第三层电子也可成为价电子。<br/><br/>
-        <span style="color:red;font-weight:bold;">主族元素的价电子就是最外层电子（确信）</span><br/><br/><br/><br/><br/><br/>
+        <span class="def">定义：</span>价电子指原子核外电子中能与其他原子相互作用形成化学键的电子，为原子核外跟元素化合价有关的电子。过渡元素的价电子不仅是最外层电子，次外层电子及某些元素的倒数第三层电子也可成为价电子。价电子指原子核外电子中能与其他原子相互作用形成化学键的电子，为原子核外跟元素化合价有关的电子。过渡元素的价电子不仅是最外层电子，次外层电子及某些元素的倒数第三层电子也可成为价电子。<br/><br/>
+        <span style="color:red;font-weight:bold;">主族元素的价电子就是最外层电子（正论）</span><br/><br/><br/><br/><br/><br/>
         如何快速判断价电子排布？我们观察一下稀有气体的排布：<br/><br/>
+        <center>
         <a href="res/xyqt.jpg"><img src="res/xyqt.jpg"></a>
+        <br/>
+        <p id="declare">稀有气体价电子所占能级范围</p>
+        </center>
         <br/><br/>
         不懂你们看懂没有，我是用当前元素电子数减去上一周期<span style="color:rgb(255, 252, 56);font-weight:bold;">稀有气体</span>电子数，然后再排布就可以得到价电子。
         <br/><br/>
@@ -190,18 +227,24 @@
         要理解排布图还需要了解个原理：<br/><br/>
         <span style="color:rgb(62, 255, 120);font-weight:bold;font-size: 150%">泡利不相容原理：电子是社恐，而且比较懒。</span><br/><br/>
         我们把一个能级理解为有若干层楼（即若干个轨道）的房子。<br/><br/>
-        <a href="res/pl.jpg" /><img src="res/pl.jpg" /></a><br/><br/>
+        <center>
+        <a href="res/pl.jpg"><img src="res/pl.jpg" /></a><br/><br/>
+        </center>
         电子懒，所以能先少爬楼就少爬楼。<br/><br/>
         电子是社恐，所以如果能不共处一间就先宁可爬楼。<br/><br/>
-        <a href="res/pl2.jpg" /><img src="res/pl2.jpg" /></a><br/><br/>
+        <center>
+        <a href="res/pl2.jpg"><img src="res/pl2.jpg" /></a><br/><br/>
+        </center>
         但总有没办法的时候，这种时候为了挤一间，新来的电子只好让自旋反向。挤一间的电子叫做【成对电子】，独霸一间的叫【未成对电子】。<br/><br/>
-        <a href="res/pl3.jpg" /><img src="res/pl3.jpg" /></a><br/><br/>
+        <center>
+        <a href="res/pl3.jpg"><img src="res/pl3.jpg" /></a><br/><br/>
+        </center>
         实际运用中你们要认为左边是一楼，右边是楼顶。先有上箭头，后有下箭头。<span style="color:rgb(79, 205, 255);font-weight:bold;">房间下方或上方居中写能级名。</span><br/><br/><br/><br/>
-        <span style="font-weight:bold;font-size: 150%">Sample：V的电子排布图：</span><br/><br/>
-        <a href="res/pbt.png"><img src="res/pbt.png"></a><br/><br/>
+        <span style="font-weight:bold;font-size: 150%">Sample：</span><br/><br/>
+        <a href="res/pbt.png"><center><img src="res/pbt.png"><br/><p id="declare">V的电子排布图</p></center></a><br/><br/>
         
         <br/><br/><br/><br/>
-        有时候第一问也会这么考：<br/><br/>
+        有时候第一问也会这么考：<br/><br/><center>
         <table border="1" style="text-align:center">
             <tr>
                 <td>
@@ -223,13 +266,13 @@
                 <td>电子所占能级总数</td>
                 <td>4种轨道（s，p，d，f）中占了几种？</td>
             </tr>
-        </table><br/><br/>
+        </table></center><br/><br/>
         电子云形状只能考<span style="color:rgb(52, 255, 79);font-weight:bold">s轨道（球形）</span>，<span style="color:rgb(243, 255, 78);font-weight:bold；">p轨道（哑铃型）</span>，其他轨道描述起来过于复杂，不可考<a href="#orbital">（</a><br/><br/>
         <br/><br/><br/><br/><br/><br/><br/><br/>
         
         然后可能会考到第一电离能的大小比较：<br/><br/>
 
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>气态电中性基态原子失去一个电子转化为气态基态正离子所需要的最低能量。<br/><br/>
+        <span class="def">定义：</span>气态电中性基态原子失去一个电子转化为气态基态正离子所需要的最低能量。<br/><br/>
 
         简记：失去第一个电子的能耗。<br/><br/>
 
@@ -253,7 +296,7 @@
         <br/><br/>
         
 
-        <div class="title"><span style="font-weight:bold;font-size: 300%">第二部分：分子<br/><br/></span></div>
+        <div class="title">第二部分：分子<br/><br/></div>
         
         我们需要判断分子的空间构型以及轨道杂化。这里依赖几个概念：【孤电子对】，【键角】<br/><br/>
         孤电子对：价电子里面没有参与成键剩下来的成对电子。<br/><br/>
@@ -264,9 +307,9 @@
         <br/><br/>
         
         2、画电子式：例NH<sub>3</sub><br/><br/>
-        <a href="res/nh3.jpg"><img src="res/nh3.jpg"></a>解析：<a href="res/nh3_.jpg"><img src="res/nh3_.jpg"></a><br/><br/>
+        <a href="res/nh3.jpg"><center><img src="res/nh3.jpg"><br/><p id="declare">氨的电子式</p></center></a>解析：<a href="res/nh3_.jpg"><center><img src="res/nh3_.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         3、我的方法：找未成键的电子。例如N<sub>2</sub>H<sub>2</sub>，对于其中一个中心原子N<br/><br/>
-        <a href="res/n2h2.jpg"><img src="res/n2h2.jpg"></a><br/><br/>
+        <a href="res/n2h2.jpg"><center><img src="res/n2h2.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         <br/><br/>
         孤电子对有什么用？我们知道甲烷是<span style="color:#6dddff;font-weight:bold;">正四面体</span>结构，那是因为甲烷的C上没有【孤电子对】，而且四个C—H键完 全 一 致，所以才能成为<span style="color:#6ddfff;font-weight:bold;">正四面体</span>。<br/><br/>
         氨为什么拥有3个完 全 一 致的N—H键，却不是完美的正三角形呢？因为它有一个【孤电子对】。【孤电子对】对其他键的排斥力很大，导致三个N—H键向与孤电子对远离的方向偏移，所以最后呈现<span style="color:#ff6df8;font-weight:bold;">三角锥形</span>。<br/><br/>
@@ -275,7 +318,7 @@
         判断杂化形式：这种题目会要你填sp、sp<sup>2</sup>、sp<sup>3</sup>中的一个或多个。<br/><br/>
         如何判断呢？算与【当前原子】成键的原子数+【当前原子】孤电子对数，我们把得到的数字设为n。<br/><br/>
         那么答案就是sp<sup>n-1</sup>。<a href="#spHybrid">为什么呢？</a><br/><br/>
-        常用分子立体构型表：<br/><br/>
+        常用分子立体构型表：<br/><br/><center>
         <table border="1" style="text-align:center">
             <tr>
                 <td>
@@ -339,19 +382,19 @@
                 </td>
                 
             </tr>
-        </table>
+        </table></center>
         其它立体构型还有正八面体（如SF<sub>6</sub>），皇冠型（指S<sub>8</sub>）,正十二面体，正二十面体等等。<br/><br/>
         本质上说立体构型应该是分子的空间<a href="https://baike.baidu.com/item/凸包/179150?fr=aladdin">凸包</a>。<br/><br/>
         <br/><br/><br/><br/><br/><br/>
         找某元素的等电子体？<br/><br/>
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>原子总数相等，价电子数相等的分子或离子互为等电子体。<br/><br/>
+        <span class="def">定义：</span>原子总数相等，价电子数相等的分子或离子互为等电子体。<br/><br/>
         寻找方法：在周期表相邻位置寻找。<br/><br/><br/><br/><br/><br/><br/><br/>
         <span style="font-size:150%;font-weight:bold;">
-        Sample：找N<sub>3</sub><sup>-</sup>的等电子体分子？<br/><br/>
+        Sample：找<a href="#N3-">N</a><sub>3</sub><sup>-</sup>的等电子体分子？<br/><br/>
         </span>
         Method：目标属性：{类型：分子，价电子：16，原子数：3}；<br/><br/>
         我们先查一下表：<br/><br/>
-        <a href="res/yszqb.gif"><img src="res/yszqb.gif"></a><br/><br/>
+        <a href="res/yszqb.gif"><center><img src="res/yszqb.gif"><br/><p id="declare"></p></center></a><br/><br/>
         N旁边有O和C，其中O比N要多一个电子。我们把N和多出来的1个电子拿去换O，就得到一个等电子体分子N<sub>2</sub>O了。<br/><br/>
         CO和N<sub>2</sub>互为等电子体，所以我们把N<sub>2</sub>O中N<sub>2</sub>代换为CO，又得到一个等电子体分子：CO<sub>2</sub>。<br/><br/>
         
@@ -361,11 +404,11 @@
         
         
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <div class="title"><span style="font-size: 300%;font-weight:bold;">第三部分：化学键与极性</span></div>
+        <div class="title">第三部分：化学键与极性</div>
         
         <br/><br/>
         众所周知，化学键包括离子键，共价键。其实还有【金属键】。这里新介绍一种键：【配位键】，【配位键】属于共价键。<br/><br/>
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>配位键，又称配位共价键，或简称配键，是一种特殊的共价键。当共价键中共用的电子对是由其中一原子独自供应，另一原子提供空轨道时，就形成配位键。<br/><br/>
+        <span class="def">定义：</span>配位键，又称配位共价键，或简称配键，是一种特殊的共价键。当共价键中共用的电子对是由其中一原子独自供应，另一原子提供空轨道时，就形成配位键。<br/><br/>
         配位键形成的条件，是一个原子有<span style="color:#ffb85b;font-weight:bold;">空轨道</span>，另外一个有<span style="color:#ff579d;font-weight:bold;">孤电子对</span>。<span style="color:#ff579d;font-weight:bold;">孤电子对</span>装进了<span style="color:#ffb85b;font-weight:bold;">空轨道</span>，配位键就形成了。<br/><br/>
         提供电子对的原子或基团成为【配体】，提供空轨道的成为【受体】。【配体】、【受体】也可以是离子。<br/><br/>
         各类配合物之间都含有配位键，如水合***<br/><br/><br/><br/><br/><br/>
@@ -373,14 +416,14 @@
         Sample：NH<sub>4</sub><sup>+</sup>的形成过程：<br/><br/>
         </span>
         氨气溶解：<br/><br/>
-        <a href="res/nh3h2o.jpg"><img src="res/nh3h2o.jpg"></a><br/><br/>
+        <a href="res/nh3h2o.jpg"><center><img src="res/nh3h2o.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         氨水电离：<br/><br/>
-        <a href="res/nh4.jpg"><img src="res/nh4.jpg"></a><br/><br/>
+        <a href="res/nh4.jpg"><center><img src="res/nh4.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         为什么H的电子会被抢走呢？为什么【氢键】又能形成呢？<br/><br/>
         原子【电负性】就是用来解释这种问题的。<br/><br/>
         <span style="color:#6dffe7;font-weight:bold;font-size: 150%">电负性表：（鲍林标度）<br/><br/></span>
-        <a href="res/dfx.jpg"><img src="res/dfx.jpg"></a><br/><br/>
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>电负性是元素的原子在化合物中吸引电子的能力的标度。元素的电负性越大，表示其原子在化合物中吸引电子的能力越强。<br/><br/>
+        <a href="res/dfx.jpg"><center><img src="res/dfx.jpg"><br/><p id="declare"></p></center></a><br/><br/>
+        <span class="def">定义：</span>电负性是元素的原子在化合物中吸引电子的能力的标度。元素的电负性越大，表示其原子在化合物中吸引电子的能力越强。<br/><br/>
         一般来说右上大（除去稀有气体不论），左下小。但跨行比较时要注意S和C差不多。
         <br/><br/><br/><br/>
         N—H键中，由于N的电负性比H大，<span style="color:#fffd76;font-weight:bold;">共享的电子对会偏向N</span>，使得N偏向带负电，H偏向带正电。水分子中O—H的情况类似。<br/><br/>
@@ -413,49 +456,47 @@
         Ans：SO<sub>2</sub>是分子晶体，while SiO<sub>2</sub>是原子晶体。<br/><br/><br/><br/>
         </span>
         这里补充一下<span style="color:rgb(255, 131, 249)">σ键</span>和<span style="color:rgb(131, 255, 168)">π键</span>的知识点：<br/><br/>
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>原子轨道沿键轴（两原子核间连线）方向以“头碰头”方式重叠所形成的共价键称为σ 键。形 成<span style="color:rgb(255, 131, 249)">σ键</span>时，原子轨道的重叠部分对于键轴呈圆柱形对称，沿键轴方向旋转任意角度,轨道的形状和符号均不改变。<br/><br/>
-        <a href="res/sigma.png"><img src="res/sigma.png"></a><br/><br/>
+        <span class="def">定义：</span>原子轨道沿键轴（两原子核间连线）方向以“头碰头”方式重叠所形成的共价键称为σ 键。形 成<span style="color:rgb(255, 131, 249)">σ键</span>时，原子轨道的重叠部分对于键轴呈圆柱形对称，沿键轴方向旋转任意角度,轨道的形状和符号均不改变。<br/><br/>
+        <a href="res/sigma.png"><center><img src="res/sigma.png"><br/><p id="declare"></p></center></a><br/><br/>
         由于同向的p轨道只有一对，s轨道只有一个，两个原子之间最多形成一个<span style="color:rgb(255, 131, 249)">σ键</span>。共价/离子单键，配位键都是<span style="color:rgb(255, 131, 249)">σ键</span>。那三键和二键呢？<br/><br/>
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>原子轨道垂直于键轴以“肩并肩”方式重叠所形成的化学键称为π 键。形 成π 键时，原子轨道的重叠部分对等地分布在包括键轴在内的平面上、下两侧，形状相同，符号相反，呈镜面反对称。<br/><br/>
-        <a href="res/pi.png"><img src="res/pi.png"></a><br/><br/>
+        <span class="def">定义：</span>原子轨道垂直于键轴以“肩并肩”方式重叠所形成的化学键称为π 键。形 成π 键时，原子轨道的重叠部分对等地分布在包括键轴在内的平面上、下两侧，形状相同，符号相反，呈镜面反对称。<br/><br/>
+        <a href="res/pi.png"><center><img src="res/pi.png"><br/><p id="declare"></p></center></a><br/><br/>
         上面这张图是不是有点懵？我们只看有颜色的部分。那就是N<sub>2</sub>分子的三个2p轨道的电子云的样子。<br/><br/>
         <span style="color:red">红色</span>的两个p轨道间已经成了<span style="color:rgb(255, 131, 249)">σ键</span>，那我们把它们拿掉。现在那俩N长这样：<br/><br/>
-        <a href="res/n2.jpg"><img src="res/n2.jpg"></a><br/><br/>
+        <a href="res/n2.jpg"><center><img src="res/n2.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         剩下两个p轨道的电子也得成键啊，不然不能8电子稳定。那么我们把他们靠近。<br/><br/>
-        <a href="res/n2_.jpg"><img src="res/n2_.jpg"></a><br/><br/>
+        <a href="res/n2_.jpg"><center><img src="res/n2_.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         可以看到，同色的轨道间可以有重叠，于是我们得到了俩<span style="color:rgb(131, 255, 168)">π键</span>。这就是N<sub>2</sub>的三键。<br/><br/>
         我们平移以后它们才有重叠，所以实际上<span style="color:rgb(131, 255, 168)">π键</span>的电子云重叠比起<span style="color:rgb(255, 131, 249)">σ键</span>小得多，所以<span style="color:rgb(131, 255, 168)">π键</span>不是很稳定。<br/><br/>
         <br/><br/><br/><br/><br/><br/>
 
         <div class="title">
-        <span style="font-size: 300%;font-weight:bold;">
         第四部分：各种晶体<br/><br/>
-        </span>
         </div>
 
 
         看到这里，你大约已经具备在6分钟内骗10分左右的能力，我想说虽然晶胞题认真做起来不难，但是这题对于慢的考生来说最好选择放弃。<br/><br/>
         如果说有机同分异构是考【排列组合】，那么结构的这题就是考【立体几何】。<br/><br/>
         做这题，你需要：典型晶体结构的积累、高速运算和逆运算的头脑、翻阅试卷飞快的双手（去第一张查相对原子质量）<br/><br/>
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>构成晶体的最基本的几何单元称为晶胞（Unit Cell），其形状、大小与空间格子的平行六面体单位相同，保留了整个晶格的所有特征。晶胞是能完整反映晶体内部原子或离子在三维空间分布之化学-结构特征的平行六面体最小单元。<br/><br/>
+        <span class="def">定义：</span>构成晶体的最基本的几何单元称为晶胞（Unit Cell），其形状、大小与空间格子的平行六面体单位相同，保留了整个晶格的所有特征。晶胞是能完整反映晶体内部原子或离子在三维空间分布之化学-结构特征的平行六面体最小单元。<br/><br/>
         <br/><br/>
         <br/><br/>
         <br/><br/>
         我们先来看比较简单的晶体：<br/><br/>
         简单立方堆积：很少晶体会这么堆积（Po、KMgF<sub>3</sub>等），因为<span style="color:#9999ff">空间利用率</span>低得令人发指。但是算起来是最方便的。<br/><br/>
-        <a href="res/jd.jpg"><img src="res/jd.jpg"></a><br/><br/>
+        <a href="res/jd.jpg"><center><img src="res/jd.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         顶点上的原子（粒子）可以被八个正方体公交，所以在<a href="https://baike.baidu.com/item/立方晶系/8785613?fr=aladdin">立方晶系</a>中顶点的粒子只能算1/8个。<br/>
         所以这样一个晶胞里面只含有8*（1/8）=1个粒子。而晶胞棱长就等于粒子直径。<br/><br/>
         体心立方堆积：<span style="color:#9999ff">空间利用率</span>只稍微好一点，但就比较常见了（如铬、钼、钨、钒、铁、钠、钾等碱金属）。<br/><br/>
-        <a href="res/tx.jpg"><img src="res/tx.jpg"></a><br/><br/>
+        <a href="res/tx.jpg"><center><img src="res/tx.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         算晶胞棱长的话用比例模型会好懂一点，采用这种堆积的晶胞有1+1=2个粒子。体对角线上含有两个1/8球体和一个球体相切，所以晶胞棱长=粒子半径*4/&radic;3。<br/><br/>
         六方最密堆积：<span style="color:#9999ff">空间利用率</span>最高（铍、镁、钛、钴、锌、锆、锝、钌、镉、铪、铼、锇、钪、钇、镧、镨、钕、钷、钆、铽、镝、钬、铒、铥）。<br/><br/>
-        <a href="res/lf.jpg"><img src="res/lf.jpg"></a><br/><br/>
+        <a href="res/lf.jpg"><center><img src="res/lf.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         あれ？不是正方体我怎么算体积？算法当然是有的，只是有点反人类：<br/><br/>
-        <a href="res/6f1.jpg"><img src="res/6f1.jpg"></a><br/><a href="res/6f2.jpg"><img src="res/6f2.jpg"></a><br/><a href="res/6f3.jpg"><img src="res/6f3.jpg"></a><br/><br/>
+        <a href="res/6f1.jpg"><center><img src="res/6f1.jpg"><br/><p id="declare"></p></center></a><br/><a href="res/6f2.jpg"><center><img src="res/6f2.jpg"><br/><p id="declare"></p></center></a><br/><a href="res/6f3.jpg"><center><img src="res/6f3.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         <br/><br/><!-- <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msqrt>3</msqrt></mrow></math> -->
         面心立方最密堆积：和六方最密堆积大同小异。<br/><br/>
-        <a href="res/mx.jpg"><img src="res/mx.jpg"></a><br/><br/>
+        <a href="res/mx.jpg"><center><img src="res/mx.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         但是棱长算起来就容易多了：半径*4/&radic;2。<br/><br/>
         求棱长的最终目的都是求体积。立方晶系中体积和棱长什么关系不用我废话了吧。<br/><br/>
         与六方，面心立方类似的最密堆积还有很多种，这里就不一一举例了。<br/><br/>
@@ -515,23 +556,23 @@
         </table>
         请根据需要四舍五入。<br/><br/>
         等等，【配位数】是什么？与当前粒子最近的其它粒子总数。<br/><br/>
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>在晶体结构中某质点周围与该质点直接联系的质点数，称为该质点的配位数。在离子晶格中，与某离子联系的异号离子或分子数，即该离子的配位数。
+        <span class="def">定义：</span>在晶体结构中某质点周围与该质点直接联系的质点数，称为该质点的配位数。在离子晶格中，与某离子联系的异号离子或分子数，即该离子的配位数。
         <br/><br/><br/><br/>
         接下来是比较复杂的离子晶体了，这些晶体的<span style="color:#9999ff">空间利用率</span>和配位数由于离子的不同，都要自己算的。<br/><br/>
         先看简单的NaCl：<br/><br/>
-        <a href="res/nacl.jpg"><img src="res/nacl.jpg"></a><br/><br/>
+        <a href="res/nacl.jpg"><center><img src="res/nacl.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         是不是跟简单立方堆积相似？配位数6，棱长是2*(R<sub>Na</sub>+R<sub>Cl</sub>)。<br/><br/>
         接下来是CsCl：<br/><br/>
-        <a href="res/cscl.jpg"><img src="res/cscl.jpg"></a><br/><br/>
+        <a href="res/cscl.jpg"><center><img src="res/cscl.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         与体心立方堆积相似，配位数8，棱长你们会算了吧。
         接下来是金刚石：<br/><br/>
-        <a href="res/c.jpg"><img src="res/c.jpg"></a><br/><br/>
+        <a href="res/c.jpg"><center><img src="res/c.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         看得出来金刚石是基于面心立方，但不同的是面心立方内存在八个小正四面体，即我们先把大正方体拆成8个小正方体：<br/><br/>
-        <a href="res/c2.jpg"><img src="res/c2.jpg"></a><br/><br/>
+        <a href="res/c2.jpg"><center><img src="res/c2.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         图中ABCD组成正四面体，其中四个这样的小正四面体中央还要填一个C，所以整体看起来很乱。<br/><br/>
         但是这样我们已经看得出来E在小正方体正中央，所以通过考察体对角线可以知道金刚石的晶胞棱长是2*R<sub>C</sub>*4/&radic;3。<br/><br/>
         最后是萤石（CaF<sub>2</sub>）：<br/><br/>
-        <a href="res/caf2.jpg"><img src="res/caf2.jpg"></a><br/><br/>
+        <a href="res/caf2.jpg"><center><img src="res/caf2.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         与金刚石的唯一区别就是现在8个小正四面体都要填了，不过填的是F<sup>-</sup>。这样一来F<sup>-</sup>配位数是4，Ca<sup>2+</sup>配位数是8。<br/><br/>
         棱长算起来就是4*(R<sub>Ca</sub>+R<sub>F</sub>)/&radic;3。<br/><br/><br/><br/>
         晶胞质量怎么算？通过均摊法算出晶胞里每种元素的原子有多少个，然后乘以它的相对原子质量，对于每种元素重复上述过程。<br/><br/>
@@ -553,32 +594,112 @@
         这里补充一下sp轨道杂化的概念。<br/><br/>
         甲烷分子里面明明C有一个2s轨道和3个2p轨道用于成键，2s和2p显然是不同的，那么为什么能得到正四面体呢？<br/><br/>
         那就是因为2s和2p轨道发生了【杂化】。<br/><br/>
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>在成键的过程中，由于原子间的相互影响，同一原子中几个能量相近的不同类型的原子轨道（即波函数），可以进行线性组合，重新分配能量和确定空间方向，组成数目相等的新原子轨道，这种轨道重新组合的方式称为杂化（Hybridization），杂化后形成的新轨道称为杂化轨道（Hybrid Orbital）。<br/><br/>
+        <span class="def">定义：</span>在成键的过程中，由于原子间的相互影响，同一原子中几个能量相近的不同类型的原子轨道（即波函数），可以进行线性组合，重新分配能量和确定空间方向，组成数目相等的新原子轨道，这种轨道重新组合的方式称为杂化（Hybridization），杂化后形成的新轨道称为杂化轨道（Hybrid Orbital）。<br/><br/>
         简单说就是中心原子想要尽可能让组合而成的键对称，所以消耗了几个轨道将他们<del>回炉重造</del>做成了几个相同的轨道，这几个轨道与融合前轨道数不变但是变得更相似了。下图是sp<sup>3</sup>的例子：<br/><br/>
-        <a href="res/sp3hb.jpg"><img src="res/sp3hb.jpg"></a><br/><br/>
+        <a href="res/sp3hb.jpg"><center><img src="res/sp3hb.jpg"><br/><p id="declare"></p></center></a><br/><br/>
         值得注意的是sp杂化只能发生在能量相近的同能层s轨道和p轨道之间，而且s可以和一个，两个或者三个p轨道发生杂化，取决于与中心原子结合的原子数。所形成的杂化轨道sp<sup>n-1</sup>轨道实际上包含了n个轨道。<br/><br/>
         再给一个sp的例子，剩下的两个p轨道就放一边啦，不用成键了：<br/><br/>
-        <a href="res/sphb.jpg"><img src="res/sphb.jpg"></a><br/><br/><br/><br/><br/><br/>
+        <a href="res/sphb.jpg"><center><img src="res/sphb.jpg"><br/><p id="declare"></p></center></a><br/><br/><br/><br/><br/><br/>
         另外补充一下【晶格能】的知识，【晶格能】大概只有讲道理题会用到~<br/><br/>
-        <span style="color:#0cff00;font-weight:bold;">定义：</span>晶格能是指在标准状况下，使离子晶体变成气态正离子和气态负离子时所吸收的能量，它是度量晶格稳定性的参数。影响晶格能大小的因素有离子半径、离子电荷以及离子的电子层构型等.电荷高、半径小的离子，其晶格能大。<br/><br/>
+        <span class="def">定义：</span>晶格能是指在标准状况下，使离子晶体变成气态正离子和气态负离子时所吸收的能量，它是度量晶格稳定性的参数。影响晶格能大小的因素有离子半径、离子电荷以及离子的电子层构型等.电荷高、半径小的离子，其晶格能大。<br/><br/>
         <span style="font-size:30px;">电荷高、半径小的离子，其晶格能大。</span><br/><br/>
         <br/><br/>
-        <div style="text-align:center;font-size: 350%;font-weight: bold;">
-            各轨道电子云图：
+        <div class="adds" id="orbital">
+            附：各轨道电子云图
         </div><br/><br/>
         <center>
-            <img src="res/s.jpg"><br/>s轨道(1个方向)
-        </center><br/><br/>
+            <img src="res/s.jpg"><br/><p id="declare">s轨道(1个方向)</p>
+        </center><br/><br/><br/><br/><br/><br/><br/><br/>
         <center>
-            <img src="res/p1.png"><br/>p轨道(3个方向)
-        </center><br/><br/>
+            <img src="res/p1.png"><br/><p id="declare">p轨道(3个方向)</p>
+        </center><br/><br/><br/><br/><br/><br/><br/><br/>
         <center>
-            <img src="res/d.png" style="background:white"><br/>d轨道(5个方向)
-        </center><br/><br/>
+            <img src="res/d.png" style="background:white"><br/><p id="declare">d轨道(5个方向)</p>
+        </center><br/><br/><br/><br/><br/><br/><br/><br/>
         <center>
-            <img src="res/f.jpg"><br/><img src="res/f2.png"><br/>f轨道(7个方向)
+            <img src="res/f.jpg"><br/><img src="res/f2.png"><br/><p id="declare">f轨道(7个方向)</p>
         </center><br/><br/>
-        <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div class="adds" id="N3-">
+        补充：叠氮根
+        </div>
+        <br/><br/><br/><br/>
+        <a href="res/N3.jpg"><center><img src="res/N3.jpg" style="background-color: white"/><p id="declare">叠氮根结构</p></center></a>
+        为什么特地拿这个出来讲呢？<br/><br/><br/><br/>
+        因为我至少死了3次在这个离子上<br/><br/><br/><br/>
+        <a href="res/N3fake.png"><center><img src="res/N3fake.png" style="background-color: white"/><p id="declare">我以为的叠氮根结构</p></center></a>
+        <br/><br/><br/><br/>
+        答案总是说因为N<sub>3</sub><sup>-</sup>与CO<sub>2</sub>是等电子体，所以叠氮根是直线型。<br/><br/><br/><br/>
+        查了才知道叠氮根里面存在两个单键和两个大π键（上图方框部分）。<br/><br/><br/><br/>
+        所以以后构建分子结构的时候也不要老想着最外层要补够8个电子，有条件的话还是查一查比较好。
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div class="adds" id="N3-">
+            补充：第七周期元素
+        </div><br/><br/><br/><br/>
+        翻翻你的元素周期表，把那些Uuo、Uus什么的改过来吧。
+        <br/><br/><br/><br/>
+        这些都是课本不会告诉你的元素：<br/><br/><br/><br/>
+        <div style="font-size: 150%">
+            <center>
+                <table border="1" style="text-align: center">
+                    <tr>
+                        <td>原子序数</td>
+                        <td>真实元素符号</td>
+                        <td>中文名称</td>
+                        <td>发现年份</td>
+                        <td>名称由来</td>
+                    </tr>
+                    <tr>
+                        <td>113</td>
+                        <td>Nh</td>
+                        <td>鉨</td>
+                        <td>2004</td>
+                        <td>俄罗斯和美国在竞争新元素的发现时，由日本(Nihon)提前自主发现的元素</td>
+                    </tr>
+                    <tr>
+                        <td>114</td>
+                        <td>Fl</td>
+                        <td>鈇</td>
+                        <td>1999</td>
+                        <td>纪念苏联化学家Flyorov</td>
+                    </tr>
+                    <tr>
+                        <td>115</td>
+                        <td>Mc</td>
+                        <td>鏌</td>
+                        <td>2003</td>
+                        <td>莫斯科</td>
+                    </tr>
+                    <tr>
+                        <td>116</td>
+                        <td>Lv</td>
+                        <td>鉝</td>
+                        <td>2000</td>
+                        <td>劳伦斯利弗莫尔国家实验室（Lawrence Livermore National Laboratory）</td>
+                    </tr>
+                    <tr>
+                        <td>117</td>
+                        <td>Ts</td>
+                        <td><img src="res/ts.jpg" style="max-height:40%;max-width: 40%; vertical-align:middle;"></td>
+                        <td>2010</td>
+                        <td>田纳西州</td>
+                    </tr>
+                    <tr>
+                        <td>118</td>
+                        <td>Og</td>
+                        <td><img src="res/og.jpg" style="max-height:40%;max-width: 40%; vertical-align:middle;"></td>
+                        <td>2016</td>
+                        <td>俄罗斯物理学家尤里·奥加涅(Yuri Oganessian)</td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div class="title">REFs：</div>
+        <div class="title">百度百科</div>
+        <div class="title">谷歌图片</div>
+        <div class="title"><a href="https://www.bilibili.com/video/av11488471?from=search&seid=5320344479989401446">av11488471</a></div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <a href="res/red.png">赞助红包码……其实本来写这篇文章还是为了给自己的服务器续命……喜欢的话扫一下然后拿去用吧~</a>
         </div>
     </body>
