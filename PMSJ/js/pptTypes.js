@@ -4,22 +4,85 @@ document.addEventListener("DOMContentLoaded", function () {
 	var itv,
 		height = document.body.offsetHeight;
 	var page = scrollTop() / height | 0;
+	var is_slided=false;
+	document.getElementById("TouchMoveMonitor2").innerText=page;
 	addEventListener("resize", onresize, false);
 	onresize();
+	var sX=0,sY=0;
+	document.addEventListener("touchstart",function (hajime){
+
+		sX=hajime.pageX;
+		sY=hajime.pageY;
+		is_slided=false;
+	});
+	document.addEventListener("touchmove",function (em){
+		em.preventDefault();
+		is_slided=true;
+
+		document.getElementById("TouchMoveMonitor").innerText="pageX:"+em.pageX+"\npageY:"+em.pageY+"\nclientX:"+em.clientX+"\nclientY:"+em.clientX;
+		
+	});
+	document.addEventListener("touchend",function (owari){
+				
+		//owari.preventDefault();
+		if (is_slided){
+			var dX=sX-owari.pageX;
+			var dY=sY-owari.pageY;
+			document.getElementById("TouchMoveMonitor").innerText=dX+"\n"+dY;
+			
+			//alert(dX+"\n"+dY);
+			if (-dX >= dY && -dX >= -dY) {
+				document.getElementById("TouchMoveMonitor2").innerText="migi";
+			}
+			else if (dY > -dX && dY > dX) {
+				document.getElementById("TouchMoveMonitor2").innerText=page;
+				page+=1;
+				clearTimeout(itv);
+				itv=setTimeout(function(){
+					if (pageCHK(page)!=-1){
+						return pageCHK(page);
+					}
+					move();
+				},100);
+			}
+			else if (dX >= -dY && dX >= dY) {
+				document.getElementById("TouchMoveMonitor2").innerText="hitari";
+			}
+			else {
+				document.getElementById("TouchMoveMonitor2").innerText=page;
+				page-=1;
+				clearTimeout(itv);
+				itv=setTimeout(function(){
+					if (pageCHK(page)!=-1){
+						return pageCHK(page);
+					}
+					move();
+				},100);
+			}
+		}
+	});
+	var maxPage=(document.body.scrollHeight / height | 0) - 1;
+	function pageCHK(PG){
+		if (PG < 0) {
+			return page = 0;
+		}
+		if (PG > maxPage) {
+			return page = maxPage;
+		}//防越界
+		return -1;
+	}
 
 	//鼠标滚轮事件
 	document.body.addEventListener("onwheel" in document ? "wheel" : "mousewheel", function (e) {
 		clearTimeout(itv);
 		itv = setTimeout(function () {
 			//判断滚轮滚的方向
-			var delta = e.wheelDelta / 120 || -e.deltaY / 3;
+			var delta = e.wheelDelta / 120 || -e.deltaY / 3;//1或-1
+			//console.log(max);
 			page -= delta;
-			var max = (document.body.scrollHeight / height | 0) - 1;
-			if (page < 0) {
-				return page = 0;
-			}
-			if (page > max) {
-				return page = max;
+			//document.getElementById("TouchMoveMonitor2").innerText=page;
+			if (pageCHK(page)!=-1){
+				return pageCHK(page);
 			}
 			move();
 		}, 100);
