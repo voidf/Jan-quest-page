@@ -23,19 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
 		
 	});
 	document.addEventListener("touchend",function (owari){
-				
+		//document.getElementById("TouchMoveMonitor").innerText=is_slided;
 		//owari.preventDefault();
 		if (is_slided){
 			var dX=sX-owari.pageX;
 			var dY=sY-owari.pageY;
-			document.getElementById("TouchMoveMonitor").innerText=dX+"\n"+dY;
+			//document.getElementById("TouchMoveMonitor").innerText=dX+"\n"+dY;
 			
 			//alert(dX+"\n"+dY);
 			if (-dX >= dY && -dX >= -dY) {
-				document.getElementById("TouchMoveMonitor2").innerText="migi";
+				//document.getElementById("TouchMoveMonitor2").innerText="migi";
 			}
 			else if (dY > -dX && dY > dX) {
-				document.getElementById("TouchMoveMonitor2").innerText=page;
+				//document.getElementById("TouchMoveMonitor2").innerText=page;
 				page+=1;
 				clearTimeout(itv);
 				itv=setTimeout(function(){
@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
 				},100);
 			}
 			else if (dX >= -dY && dX >= dY) {
-				document.getElementById("TouchMoveMonitor2").innerText="hitari";
+				//document.getElementById("TouchMoveMonitor2").innerText="hitari";
 			}
 			else {
-				document.getElementById("TouchMoveMonitor2").innerText=page;
+				//document.getElementById("TouchMoveMonitor2").innerText=page;
 				page-=1;
 				clearTimeout(itv);
 				itv=setTimeout(function(){
@@ -59,6 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
 					move();
 				},100);
 			}
+		}
+		else {
+			clickEvent({pg:page});
 		}
 	});
 	var maxPage=(document.body.scrollHeight / height | 0) - 1;
@@ -125,39 +128,64 @@ var yd = [];
 var ydd = [];
 var divList=[];
 window.onload = function () {
-	console.log(document.querySelectorAll("div"));
-	console.log(document.querySelectorAll("div").length);
+	//console.log(document.querySelectorAll("div"));
+	//console.log(document.querySelectorAll("div").length);
 	l = document.querySelectorAll("div").length;
 	divList = document.querySelectorAll("div");
 
 	for (j = 0; j < l; j++) {
-		console.log(divList[j].offsetTop);
+		//console.log(divList[j].offsetTop);
 		xd.push(divList[j].offsetLeft);
 		xdd.push(divList[j].offsetLeft + divList[j].offsetWidth);
 		yd.push(divList[j].offsetTop);
 		ydd.push(divList[j].offsetTop + divList[j].offsetHeight);
 	}
-	console.log(yd);
+	//console.log(yd);
 }
 
+function clickEvent ({event,pg=0}) {
+	document.getElementById("TouchMoveMonitor2").innerText=pg;
+	var event = window.event||arguments[0];
+	if (pg){
+		if (nowPage==pg){
+			i++;
+		}
+		else{
+			nowPage=pg;
+			i=1;
+		}
+		
+		//i=0;
+	}
+	else{
+		
+		//document.getElementById("TouchMoveMonitor").innerText=event;
+		var x = event.clientX + Math.max(document.documentElement.scrollLeft, document.body.scrollLeft);
+		var y = event.clientY + Math.max(document.documentElement.scrollTop, document.body.scrollTop);
+		// try{
+		// 	document.getElementById("TouchMoveMonitor2").innerText=event.changedTouches[0].clientX;
+		// }catch (e){
+		// 	console.log("error");
+		// }
+		// finally{
 
-document.onclick = function (event) {
-	//var divObject = document.getElementById("changeablePage1");
-	//console.log(divObject);
-	var x = event.clientX + Math.max(document.documentElement.scrollLeft, document.body.scrollLeft);
-	var y = event.clientY + Math.max(document.documentElement.scrollTop, document.body.scrollTop);
-	for (j = 0; j < l; j++) {
-		if (x >= xd[j] && x <= xdd[j] && y <= ydd[j] && y >= yd[j]) {
+		// }
+		for (j = 0; j < l; j++) {
+			if (x >= xd[j] && x <= xdd[j] && y <= ydd[j] && y >= yd[j]) {
 
-			if (j == nowPage) {
-				i++;
-			}
-			else {
-				nowPage = j;
-				i = 1;
+				if (j == nowPage) {
+					i++;
+				}
+				else {
+					nowPage = j;
+					i = 1;
+				}
 			}
 		}
 	}
+	
+	console.log("nowPage"+nowPage);
+	console.log("i:"+i+";j:"+j);
 	//console.log(x, y);
 	//console.log("op"+`${i}`);
 	//console.log(divList);
@@ -187,10 +215,10 @@ document.onclick = function (event) {
 				opobj.style.top=String(yd[nowPage])+"px";
 			}
 			if(opobj.className=="absopa"){
-				console.log(opobj.style);
+
 				opobj.style.left=String(window.innerWidth*0.5-325)+"px";
 				opobj.style.top=String(yd[nowPage]+window.innerHeight*0.5-325)+"px";
-				console.log(opobj.style.left)
+
 			}
 		}
 		//console.log(opobj.className)
@@ -230,15 +258,6 @@ document.onclick = function (event) {
 			}
 		}
 	}
-};
-/* window.onload=function(){
-	var timer=setInterval(colorLiner,20);
-	var t=100;
-	function colorLiner(){
-		if (t>=0){
-			var opobj = document.getElementById("op3");
-			opobj.style.opacity = -t/100;
-			t--;
-		}
-	}
-} */
+}
+document.onclick = clickEvent;
+	
